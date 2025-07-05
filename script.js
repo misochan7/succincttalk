@@ -30,9 +30,11 @@ mascot.addEventListener("click", () => {
 
 // 背景クリックで元に戻す
 document.body.addEventListener("click", (e) => {
-  if (e.target !== mascot && isTalking) {
+  // mascot と speech 両方以外がクリックされた場合のみリセット
+  if (e.target !== mascot && e.target !== speech && isTalking) {
     mascot.src = originalSrc;
     speech.textContent = "Click me!";
     isTalking = false;
   }
 });
+
