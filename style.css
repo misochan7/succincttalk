@@ -14,7 +14,7 @@ body {
 
 .header {
   position: absolute;
-  top: 20px;
+  top: 60px;
   width: 100%;
   text-align: center;
   pointer-events: none;
