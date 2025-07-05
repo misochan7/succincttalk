@@ -13,6 +13,16 @@ const phrases = [
   "Stake PROVE, secure the net!",
   "Rust → SP1 → zk proof!",
   "Proofs by provers, speed by design."
+  "Did you spend all your credits?",
+  "How many stars do you have?",
+  "I took a rocket ride today!",
+  "GPROVE. That's it. That’s the vibe.",
+  "Where’s the yellow bird? 🐤",
+  "Welcome to Stage 2.5.",
+  "Thinking about Succinct... in space. 🌌",
+  "Time to stake some PROVE!",
+  "You’re the rockstar! 🎸",
+  "Prove your love 💖"
 ];
 
 let originalSrc = "mascot.png";
