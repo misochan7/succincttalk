@@ -21,10 +21,6 @@ body {
   transition: transform 0.2s ease;
 }
 
-#mascot:hover {
-  transform: scale(1.05);
-}
-
 #speech {
   position: absolute;
   bottom: 220px; /* ← マスコットの高さ+αの位置に */
