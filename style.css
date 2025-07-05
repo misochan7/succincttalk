@@ -3,11 +3,17 @@ body {
   color: white;
   font-family: 'Courier New', monospace;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* ← 上詰めに */
   height: 100vh;
   margin: 0;
-  flex-direction: column;
+}
+
+#logo {
+  width: 200px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .container {
@@ -22,7 +28,7 @@ body {
 
 #speech {
   position: absolute;
-  bottom: 220px; /* ← マスコットの高さ+αの位置に */
+  bottom: 220px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
@@ -32,17 +38,5 @@ body {
   font-family: monospace;
   white-space: nowrap;
   z-index: 10;
-  pointer-events: none; /* 吹き出しがクリック対象にならないようにする */
-}
-
-#logo-container {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-#logo {
-  width: 200px;
-  height: auto;
+  pointer-events: none;
 }
