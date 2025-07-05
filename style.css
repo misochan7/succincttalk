@@ -51,12 +51,13 @@ body {
   transform: translateX(-50%);
   background-color: #333;
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 12px 18px;
+  border-radius: 12px;
   font-family: monospace;
+  font-size: 20px;       /* 💡 ここで文字を大きく */
+  font-weight: bold;     /* 💡 ここで太字に */
   white-space: nowrap;
   z-index: 10;
   pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* お好みで光らせてもOK */
 }
