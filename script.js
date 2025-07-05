@@ -1,28 +1,40 @@
-const mascot = document.getElementById('mascot');
-const speech = document.getElementById('speech');
+// script.js
+const mascot = document.getElementById("mascot");
+const speech = document.getElementById("speech");
 
+const faces = ["mascot2.png", "mascot3.png"];
 const phrases = [
-  "Ploof!",
-  "Feed me! 🍜",
-  "Nyaa~ 💤",
-  "I'm watching you...",
   "Wanna prove something?",
-  "Give me a nap!"
+  "I'm watching you.",
+  "Feed me Ploof.",
+  "Zzz... just kidding!",
+  "0-knowledge, 100% cuteness"
 ];
 
-const altImages = ['mascot2.png', 'mascot3.png'];
+let originalSrc = "mascot.png";
+let isTalking = false;
 
-mascot.addEventListener('click', () => {
-  // ランダムセリフ
-  const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-  speech.textContent = phrase;
+mascot.addEventListener("click", () => {
+  if (isTalking) return;
 
-  // ランダム画像選択
-  const newImage = altImages[Math.floor(Math.random() * altImages.length)];
-  mascot.src = newImage;
+  isTalking = true;
 
-  // 1秒後に戻す
-  setTimeout(() => {
-    mascot.src = 'mascot.png';
-  }, 1000);
+  // 表情変更
+  const face = faces[Math.floor(Math.random() * faces.length)];
+  mascot.src = face;
+
+  // 吹き出し表示
+  const text = phrases[Math.floor(Math.random() * phrases.length)];
+  speech.textContent = text;
+
+  // 表情は戻さない（次のクリックまで維持）
+});
+
+document.body.addEventListener("click", (e) => {
+  // mascot以外クリックで元に戻す
+  if (e.target !== mascot && isTalking) {
+    mascot.src = originalSrc;
+    speech.textContent = "Click me!";
+    isTalking = false;
+  }
 });
