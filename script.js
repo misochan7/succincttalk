@@ -2,21 +2,27 @@ const mascot = document.getElementById('mascot');
 const speech = document.getElementById('speech');
 
 const phrases = [
-  "Hi! I'm alive!",
-  "Feed me!! 🍙",
-  "Wanna prove something?",
   "Ploof!",
-  "I'm sleepy... 😪",
-  "Let's be friends!",
+  "Feed me! 🍜",
+  "Nyaa~ 💤",
+  "I'm watching you...",
+  "Wanna prove something?",
+  "Give me a nap!"
 ];
 
+const altImages = ['mascot2.png', 'mascot3.png'];
+
 mascot.addEventListener('click', () => {
+  // ランダムセリフ
   const phrase = phrases[Math.floor(Math.random() * phrases.length)];
   speech.textContent = phrase;
 
-  // 目をキラキラにして1秒後に戻す
-  mascot.src = "mascot_sparkle.png";
+  // ランダム画像選択
+  const newImage = altImages[Math.floor(Math.random() * altImages.length)];
+  mascot.src = newImage;
+
+  // 1秒後に戻す
   setTimeout(() => {
-    mascot.src = "mascot_default.png";
+    mascot.src = 'mascot.png';
   }, 1000);
 });
