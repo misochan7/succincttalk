@@ -3,13 +3,18 @@ const speech = document.getElementById("speech");
 
 const faces = ["mascot2.png", "mascot3.png"];
 const phrases = [
-  "Wanna prove something?",
-  "I'm watching you.",
-  "Feed me Ploof.",
-  "Zzz... just kidding!",
-  "0-knowledge, 100% cuteness",
-  "Nyaa~ 💤"
+  "Prove the world’s software.",
+  "Need a zk boost? I got SP1!",
+  "Truth, not trust.",
+  "Building programmable truth!",
+  "Powered by SP1 & PROVE token.",
+  "Zero‑knowledge made easy.",
+  "Auctioning proofs in real‑time!",
+  "Stake PROVE, secure the net!",
+  "Rust → SP1 → zk proof!",
+  "Proofs by provers, speed by design."
 ];
+
 
 let originalSrc = "mascot.png";
 
