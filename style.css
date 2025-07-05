@@ -12,6 +12,7 @@ body {
 
 .container {
   text-align: center;
+  position: relative; /* ←追加！ */
 }
 
 #mascot {
@@ -31,8 +32,9 @@ body {
   padding: 10px 15px;
   border-radius: 10px;
   font-family: monospace;
-  top: 100px; /* ←上に移動 */
+  bottom: 220px; /* ← マスコットの上になるよう調整 */
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
 }
+
