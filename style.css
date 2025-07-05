@@ -1,12 +1,12 @@
 body {
-  margin: 0;
   background-color: black;
   color: white;
-  font-family: monospace;
+  font-family: 'Courier New', monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
   flex-direction: column;
 }
 
@@ -17,9 +17,18 @@ body {
 #mascot {
   width: 200px;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#mascot:hover {
+  transform: scale(1.05);
 }
 
 #speech {
   margin-top: 20px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
 }
