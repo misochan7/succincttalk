@@ -32,9 +32,10 @@ body {
   padding: 10px 15px;
   border-radius: 10px;
   font-family: monospace;
-  bottom: 220px; /* ← マスコットの上になるよう調整 */
+  bottom: 140px; /* ← 位置を下げる（元が220だったなら、まず140くらいで試して） */
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
 }
+
 
