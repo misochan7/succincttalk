@@ -15,21 +15,35 @@ const phrases = [
   "Proofs by provers, speed by design."
 ];
 
-
 let originalSrc = "mascot.png";
+let currentFace = "";
+let currentPhrase = "";
 
-// キャラクリック → 表情＆セリフ更新（何度でも）
+// キャラクリック → 表情＆セリフ更新
 mascot.addEventListener("click", (e) => {
-  e.stopPropagation(); // キャラクリックで body のイベントが走らないようにする
-  const face = faces[Math.floor(Math.random() * faces.length)];
-  mascot.src = face;
+  e.stopPropagation(); // 背景クリックと干渉しないようにする
 
-  const text = phrases[Math.floor(Math.random() * phrases.length)];
-  speech.textContent = text;
+  // 前回と同じ画像を避ける
+  let newFace;
+  do {
+    newFace = faces[Math.floor(Math.random() * faces.length)];
+  } while (newFace === currentFace);
+  mascot.src = newFace;
+  currentFace = newFace;
+
+  // 前回と同じセリフを避ける
+  let newPhrase;
+  do {
+    newPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+  } while (newPhrase === currentPhrase);
+  speech.textContent = newPhrase;
+  currentPhrase = newPhrase;
 });
 
-// キャラ以外クリック → 元に戻す
-document.body.addEventListener("click", (e) => {
+// 背景クリック → 初期状態に戻す
+document.body.addEventListener("click", () => {
   mascot.src = originalSrc;
   speech.textContent = "Click me!";
+  currentFace = "";
+  currentPhrase = "";
 });
