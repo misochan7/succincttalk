@@ -1,4 +1,3 @@
-// script.js
 const mascot = document.getElementById("mascot");
 const speech = document.getElementById("speech");
 
@@ -8,7 +7,8 @@ const phrases = [
   "I'm watching you.",
   "Feed me Ploof.",
   "Zzz... just kidding!",
-  "0-knowledge, 100% cuteness"
+  "0-knowledge, 100% cuteness",
+  "Nyaa~ 💤"
 ];
 
 let originalSrc = "mascot.png";
@@ -26,12 +26,10 @@ mascot.addEventListener("click", () => {
   // 吹き出し表示
   const text = phrases[Math.floor(Math.random() * phrases.length)];
   speech.textContent = text;
-
-  // 表情は戻さない（次のクリックまで維持）
 });
 
+// 背景クリックで元に戻す
 document.body.addEventListener("click", (e) => {
-  // mascot以外クリックで元に戻す
   if (e.target !== mascot && isTalking) {
     mascot.src = originalSrc;
     speech.textContent = "Click me!";
