@@ -32,7 +32,7 @@ body {
   padding: 10px 15px;
   border-radius: 10px;
   font-family: monospace;
-  top: -30px; /* ←ここを調整して上に */
+  top: -10px; /* ←ここを調整して上に */
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
