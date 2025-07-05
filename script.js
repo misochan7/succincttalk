@@ -25,6 +25,7 @@ const phrases = [
   "Prove your love 💖"
 ];
 
+
 let originalSrc = "mascot.png";
 let currentFace = "";
 let currentPhrase = "";
