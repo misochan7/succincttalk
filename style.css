@@ -33,6 +33,9 @@ body {
 #mascot {
   width: 200px;
   cursor: pointer;
+  user-select: none; /* テキスト選択無効 */
+  -webkit-user-select: none; /* iOS/Android対応 */
+  -webkit-tap-highlight-color: transparent; /* タップ時の青いハイライトを無効化 */
 }
 
 #speech {
@@ -48,4 +51,6 @@ body {
   white-space: nowrap;
   z-index: 10;
   pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
