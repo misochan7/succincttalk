@@ -25,10 +25,14 @@ body {
 }
 
 #speech {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  background: #222;
-  padding: 10px 20px;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
   border-radius: 10px;
-  display: inline-block;
+  font-family: monospace;
+  top: 100px; /* ←上に移動 */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
