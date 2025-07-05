@@ -27,14 +27,14 @@ body {
 
 #speech {
   position: absolute;
+  bottom: 220px; /* ← マスコットの高さ+αの位置に */
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #333;
   color: #fff;
   padding: 10px 15px;
   border-radius: 10px;
   font-family: monospace;
-  top: -10px; /* ←ここを調整して上に */
-  left: 50%;
-  transform: translateX(-50%);
   white-space: nowrap;
+  z-index: 10;
 }
-
