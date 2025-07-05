@@ -11,8 +11,8 @@ body {
 }
 
 .container {
+  position: relative;
   text-align: center;
-  position: relative; /* ←追加！ */
 }
 
 #mascot {
@@ -32,10 +32,9 @@ body {
   padding: 10px 15px;
   border-radius: 10px;
   font-family: monospace;
-  bottom: 140px; /* ← 位置を下げる（元が220だったなら、まず140くらいで試して） */
+  top: -30px; /* ←ここを調整して上に */
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
 }
-
 
