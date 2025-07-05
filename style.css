@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+#mascot {
+  width: 200px;
+  cursor: pointer;
+}
+
+#speech {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
