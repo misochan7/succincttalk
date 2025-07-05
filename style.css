@@ -33,10 +33,17 @@ body {
 #mascot {
   width: 200px;
   cursor: pointer;
-  user-select: none; /* テキスト選択無効 */
-  -webkit-user-select: none; /* iOS/Android対応 */
-  -webkit-tap-highlight-color: transparent; /* タップ時の青いハイライトを無効化 */
+
+  /* 👇 スマホでの青ハイライト防止 */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+
+  /* transform削除（hover拡大を消した場合） */
+  transition: none;
 }
+
 
 #speech {
   position: absolute;
