@@ -35,8 +35,14 @@ body {
   pointer-events: none; /* 吹き出しがクリック対象にならないようにする */
 }
 
+#logo-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 #logo {
-  width: 150px;
-  margin-top: 80px;
-  margin-bottom: 10px;
+  width: 200px;
+  height: auto;
 }
