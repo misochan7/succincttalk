@@ -12,7 +12,7 @@ const phrases = [
   "Auctioning proofs in real‑time!",
   "Stake PROVE, secure the net!",
   "Rust → SP1 → zk proof!",
-  "Proofs by provers, speed by design."
+  "Proofs by provers, speed by design.",
   "Did you spend all your credits?",
   "How many stars do you have?",
   "I took a rocket ride today!",
