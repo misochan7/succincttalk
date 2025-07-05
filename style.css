@@ -60,4 +60,5 @@ body {
   z-index: 10;
   pointer-events: none;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* お好みで光らせてもOK */
+  border: 2px solid #fe11c5; /* 🌸 ピンクの枠線を追加！ */
 }
