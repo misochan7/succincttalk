@@ -13,8 +13,9 @@ const phrases = [
 
 let originalSrc = "mascot.png";
 
-// キャラをクリックで表情とセリフを変更
-mascot.addEventListener("click", () => {
+// キャラクリック → 表情＆セリフ更新（何度でも）
+mascot.addEventListener("click", (e) => {
+  e.stopPropagation(); // キャラクリックで body のイベントが走らないようにする
   const face = faces[Math.floor(Math.random() * faces.length)];
   mascot.src = face;
 
@@ -22,10 +23,8 @@ mascot.addEventListener("click", () => {
   speech.textContent = text;
 });
 
-// キャラ以外のクリックで元に戻す
+// キャラ以外クリック → 元に戻す
 document.body.addEventListener("click", (e) => {
-  if (e.target !== mascot && e.target !== speech) {
-    mascot.src = originalSrc;
-    speech.textContent = "Click me!";
-  }
+  mascot.src = originalSrc;
+  speech.textContent = "Click me!";
 });
