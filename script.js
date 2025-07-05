@@ -19,7 +19,7 @@ const phrases = [
   "GPROVE. That's it. That’s the vibe.",
   "Where’s the yellow bird? 🐤",
   "Welcome to Stage 2.5.",
-  "Thinking about Succinct... in space. 🌌",
+  "Thinking about Succinct... in space",
   "Time to stake some PROVE!",
   "You’re the rockstar! 🎸",
   "Prove your love 💖"
